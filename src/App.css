@@ -1,0 +1,155 @@
+.header-container {
+  display: flex;
+  justify-content: space-between; /* left & right alignment */
+  align-items: center;           /* vertical centering */
+  background-color: #13370E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px; /* space inside header */
+  z-index: 1000;
+  flex-wrap: wrap;
+  
+  box-sizing: border-box;
+}
+
+.home {
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.signup {
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 20px;
+}
+.pictureblog-text-to-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px; /* pushes content below fixed header */
+  gap: 40px;
+  flex-wrap: wrap; /* allow items to wrap on small screens */
+  max-width: 100%; /* prevent going beyond viewport */
+  padding: 0 20px; /* small horizontal padding */
+  box-sizing: border-box;
+}
+.pictureblog-text-to-left{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px; /* pushes content below fixed header */
+  gap: 40px;
+  flex-wrap: wrap; /* allow items to wrap on small screens */
+  max-width: 100%; /* prevent going beyond viewport */
+  padding: 0 20px; /* small horizontal padding */
+  box-sizing: border-box;
+}
+.pictureblog-image {
+  max-width: 100%; /* responsive image */
+  height: auto;    /* keep aspect ratio */
+  border-radius: 10px;
+
+}
+
+.pictureblog-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* so text doesn't stretch too wide */
+  height: 200px;
+  width: 500px;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* center text */
+}
+
+
+.firsthavefun {
+  font-size: 25px;
+  background-color: #5F1A1A;
+  border-radius: 163px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  
+}
+
+.firstExploreText{
+  font-size:50px;
+  font-weight: 600;
+  align-self: center;
+  shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.whatDoYouLike{
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+  align-self: center;
+  padding: 10px 20px;
+}
+
+.login-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  padding-top: 50px ;/* space around content */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* fixed width for the form */
+  gap: 15px; /* space between form elements */
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  opacity: 0.2; /* slightly transparent */
+  transition: opacity 0.3s ease;
+  color: black;
+}
+
+.login-form input:focus {
+  opacity: 1; /* fully opaque on focus */
+  outline: none; /* remove default focus outline */
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #5F1A1A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  padding-top: 50px; /* space around content */
+}
+
+.onHeader{
+  background-color: #13370E;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
