@@ -18,10 +18,10 @@ export default function SignupPage() {
 
   const handleSubmit = async(e)=>{
     e.preventDefault()
+    console.log("Submitting form:", form)
     try{
-      const res = await axios.post("http://localhost:5000/api/signup",form)
+      const res = await axios.post("http://localhost:5001/api/signup",form)
       alert(res.data.message)
-      navigate("/login")
     }catch(err){
       alert(err.response ?.data?.message || "fail")
     }

@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
 .then(()=> console.log("thankfuck"))
 .catch(err => console.log(err))
 
-
+app.listen(5001,()=> console.log("Server running on 5001"))
 const User = mongoose.model("User",UserSchema)
 
 //this is for signup 
