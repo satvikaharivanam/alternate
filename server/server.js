@@ -43,7 +43,7 @@ app.post("/api/signup", async (req, res) => {
     const newUser = new User({ username, email, password: hashedpass });
     await newUser.save();
 
-    res.json({ message: "done!!" });
+    res.json({ message: "done!!" , user: newUser });
   } catch (err) {
     console.error("Signup error:", err); // 👈 see the exact backend error
     res.status(500).json({ message: err.message });
