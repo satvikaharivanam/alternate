@@ -1,10 +1,12 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import React from "react"
 import Header from "../components/header";
 import SignupPage from "./signuppage";
 import axios from "axios";
+import Dashboard from "./dashboard"
 
 export default function LoginPage(){
+  const navigate = useNavigate()
   const [form, setForm] = React.useState({
     username : "",
     password:""
@@ -22,7 +24,10 @@ export default function LoginPage(){
     try{
       const res = await axios.post("http://localhost:5001/api/login",form)
       console.log("did that login girl")
-      alert(res.data.message)
+      
+      navigate("/login/house")  
+      localStorage.setItem("isLogged", "true");
+      
     }catch(err){
       alert(err.message?.data?.message || "cant login loser")
     }
