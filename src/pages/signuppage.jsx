@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link,useNavigate } from "react-router-dom";
+
 import Header from "../components/header";
 import axios from "axios";
+import Preferences from './preferences.jsx';
 export default function SignupPage() {
   const navigate = useNavigate()
   const [form, setForm] = React.useState({
@@ -22,6 +24,7 @@ export default function SignupPage() {
     try{
       const res = await axios.post("http://localhost:5001/api/signup",form)
       alert(res.data.message)
+      navigate("/signup/preferences")
     }catch(err){
       alert(err.response ?.data?.message || "fail")
     }
