@@ -27,6 +27,7 @@ export default function LoginPage(){
       
       navigate("/login/house")  
       localStorage.setItem("isLogged", "true");
+     
       
     }catch(err){
       alert(err.message?.data?.message || "cant login loser")

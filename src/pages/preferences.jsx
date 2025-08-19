@@ -51,6 +51,7 @@ export default function Preferences() {
         preferences: preference,
       })
       alert("set")
+      localStorage.setItem("isLogged","true")
       navigate("/login/house")
     }catch(err){
       alert(err.response?.data?.message || "not posted loser")
