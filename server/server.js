@@ -41,9 +41,9 @@ app.post("/api/signup", async (req, res) => {
     const newUser = new User({ username, email, password: hashedpass });
     await newUser.save();
 
-    res.json({ message: "done!!" , user: newUser });
+    res.json({ message: "done!!" ,userId: newUser._id, username: newUser.username });
   } catch (err) {
-    console.error("Signup error:", err); // 👈 see the exact backend error
+    console.error("Signup error:", err); 
     res.status(500).json({ message: err.message });
   }
 });
@@ -67,4 +67,29 @@ app.post("/api/login" , async (req,res)=>{
  }catch(err){
   res.status(500).json({message: err.message})
  }
+})
+
+//this is for storing the preferences
+
+app.post("/api/signup/preferences", async (req,res) => {
+  try{
+    console.log("Received preferences data:", req.body);
+    const { userId, preferences } = req.body
+    if (!userId || !preferences) {
+      return res.status(400).json({ message: "UserId and preferences required" });
+    }
+    const user = await User.findByIdAndUpdate(
+      userId,
+      { $set: { preferences}},
+      {new: true}
+    )
+     if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+
+    res.json( {message :"fking yesss",user})
+  }catch(err){
+    res.status(500).json({message: err.message})
+  }
 })
