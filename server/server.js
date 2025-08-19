@@ -73,7 +73,6 @@ app.post("/api/login" , async (req,res)=>{
 
 app.post("/api/signup/preferences", async (req,res) => {
   try{
-    console.log("Received preferences data:", req.body);
     const { userId, preferences } = req.body
     if (!userId || !preferences) {
       return res.status(400).json({ message: "UserId and preferences required" });
