@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between; /* left & right alignment */
   align-items: center;           /* vertical centering */
-  background-color: #231C40;
+  background-color: #411528;
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +74,7 @@
 
 .firsthavefun {
   font-size: 25px;
-  background-color: #231C40;
+  background-color: #411528;
   border-radius: 163px;
   color: white;
   padding: 10px 20px;
@@ -115,6 +115,10 @@
   gap: 15px; /* space between form elements */
 }
 
+.login-page h1,label,p{
+  color: #E1C9D5;
+}
+
 .login-form input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -131,8 +135,8 @@
 
 .login-form button {
   padding: 10px;
-  background-color: #231C40;
-  color: white;
+  background-color: #411528;
+  color:  #E1C9D5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -147,8 +151,8 @@
 }
 
 .onHeader{
-  background-color: #231C40;
-  color: white;
+  background-color: #411528;
+  color:  #E1C9D5;
   border: none;
   font-size: 20px;
   cursor: pointer;
@@ -180,24 +184,24 @@
   padding: 12px 24px;
   font-size: 18px;
   border-radius: 25px;
-  border: 2px solid  #231C40;
+  border: 2px solid  #411528;
   background-color: white;
-  color:  #231C40;
+  color:  #411528;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .preferenceOption:hover {
-  background-color: #c6c0ddff;
+  background-color: #fcdbe9ff;
 }
 
 .preferenceOption.selected {
-  background-color: #63549F;
+  background-color:  #411528;
   color: white;
-  border-color:  #231C40;
+  border-color:  #411528;
 }
 .preferences-submit{
-  background-color:  #231C40;;
+  background-color:  #411528;
   color : white;
   border: none;
   cursor: pointer;
@@ -205,4 +209,8 @@
   font-size: 18px;
   display: block;
   border-radius: 25px;
+}
+
+.signup-page h1,label,p{
+  color: #E1C9D5;
 }
