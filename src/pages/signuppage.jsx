@@ -24,6 +24,7 @@ export default function SignupPage() {
     try{
       const res = await axios.post("http://localhost:5001/api/signup",form)
       alert(res.data.message)
+      localStorage.setItem("userId", res.data.userId);
       navigate("/signup/preferences")
     }catch(err){
       alert(err.response ?.data?.message || "fail")
